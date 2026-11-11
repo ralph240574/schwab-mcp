@@ -241,7 +241,7 @@ def test_server_exits_when_token_is_too_old(monkeypatch, cli_async_client_type, 
     )
 
     assert result.exit_code == 1
-    assert "Token is older than 5 days" in result.output
+    assert "Token is older than 7 days" in result.output
 
 
 # ---------------------------------------------------------------------------

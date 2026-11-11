@@ -10,7 +10,8 @@ from schwab.client import AsyncClient, Client
 
 from schwab_mcp import tokens
 
-DEFAULT_MAX_TOKEN_AGE_SECONDS = 5 * 24 * 60 * 60
+# Local patch (upstream: 5 days): match Schwab's 7-day refresh-token lifetime.
+DEFAULT_MAX_TOKEN_AGE_SECONDS = 7 * 24 * 60 * 60
 
 if TYPE_CHECKING:
     from multiprocessing import Process as ProcessType, Queue as QueueType

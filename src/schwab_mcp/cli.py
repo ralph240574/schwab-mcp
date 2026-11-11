@@ -391,7 +391,7 @@ def server(
     # Check token age
     if client.token_age() >= TOKEN_MAX_AGE_SECONDS:
         send_error_response(
-            "Token is older than 5 days. Please run 'schwab-mcp auth' to re-authenticate.",
+            "Token is older than 7 days. Please run 'schwab-mcp auth' to re-authenticate.",
             code=401,
             details={
                 "token_expired": True,
